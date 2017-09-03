@@ -31,7 +31,7 @@ namespace AuthClient
 			   .Enrich.FromLogContext()
 			   .WriteTo.Elasticsearch().WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
 			   {
-				   MinimumLogEventLevel = LogEventLevel.Debug,
+				   MinimumLogEventLevel = LogEventLevel.Information,
 				   AutoRegisterTemplate = true,
 				   IndexFormat = "test-{0:yyyy.MM}"
 			   })
