@@ -27,18 +27,18 @@ namespace AuthClient
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
-			Log.Logger = new LoggerConfiguration()
-			   .Enrich.FromLogContext()
-			   .WriteTo.Elasticsearch().WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
-			   {
-				   MinimumLogEventLevel = LogEventLevel.Information,
-				   AutoRegisterTemplate = true,
-				   IndexFormat = "test-{0:yyyy.MM}"
-			   })
+            Log.Logger = new LoggerConfiguration()
+               .Enrich.FromLogContext()
+               .WriteTo.Elasticsearch().WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
+               {
+                   MinimumLogEventLevel = LogEventLevel.Information,
+                   AutoRegisterTemplate = true,
+                   IndexFormat = "test-{0:yyyy.MM}"
+               })
                .CreateLogger();
 
-			Configuration = builder.Build();
-		}
+            Configuration = builder.Build();
+        }
 
         public IConfigurationRoot Configuration { get; }
 
@@ -70,9 +70,9 @@ namespace AuthClient
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-			loggerFactory.AddSerilog();
+            loggerFactory.AddSerilog();
 
-			if (env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
