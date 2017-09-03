@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AuthHost.WEB.Authentication.Interfaces;
 using AuthHost.WEB.Models.AccountApiModels;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
@@ -17,15 +18,18 @@ namespace AuthHost.WEB.Authentication.Middlewares
         private readonly RequestDelegate _next;
         private readonly TokenProviderOptions _options;
         private readonly IIdentityProvider _identityProvider;
+        private readonly ILogger<TokenProviderMiddleware> _logger;
 
         public TokenProviderMiddleware(
             RequestDelegate next,
             IOptions<TokenProviderOptions> options,
-            IIdentityProvider identityProvider)
+            IIdentityProvider identityProvider, 
+            ILogger<TokenProviderMiddleware> logger)
         {
             _next = next;
             _options = options.Value;
             _identityProvider = identityProvider;
+            _logger = logger;
         }
 
         public Task Invoke(HttpContext context)
@@ -106,6 +110,8 @@ namespace AuthHost.WEB.Authentication.Middlewares
                 Token = encodedJwt,
                 ExpiresIn = (long)_options.Expiration.TotalSeconds
             };
+
+            _logger.LogInformation($"Token was successfuly generated for user with email: {username} ");
 
             return token;
         }

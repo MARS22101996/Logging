@@ -12,3 +12,17 @@ C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e24
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.AssemblyInfo.cs
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.dll
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.WEB.deps.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.WEB.runtimeconfig.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.WEB.runtimeconfig.dev.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.WEB.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.WEB.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.xml
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.BLL.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.DAL.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.BLL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\bin\Debug\netcoreapp1.0\AuthHost.DAL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.csprojResolveAssemblyReference.cache
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.AssemblyInfo.cs
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.WEB\obj\Debug\netcoreapp1.0\AuthHost.WEB.pdb

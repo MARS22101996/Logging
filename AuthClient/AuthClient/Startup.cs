@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.IO;
+using System.Text;
 using AuthClient.Infrastructure.Authorization;
 using AuthClient.Infrastructure.DI;
 using AutoMapper;
@@ -9,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Events;
+using Serilog.Sinks.Elasticsearch;
 
 namespace AuthClient
 {
@@ -21,8 +26,19 @@ namespace AuthClient
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
-            Configuration = builder.Build();
-        }
+
+			Log.Logger = new LoggerConfiguration()
+			   .Enrich.FromLogContext()
+			   .WriteTo.Elasticsearch().WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
+			   {
+				   MinimumLogEventLevel = LogEventLevel.Debug,
+				   AutoRegisterTemplate = true,
+				   IndexFormat = "test-{0:yyyy.MM}"
+			   })
+               .CreateLogger();
+
+			Configuration = builder.Build();
+		}
 
         public IConfigurationRoot Configuration { get; }
 
@@ -54,7 +70,9 @@ namespace AuthClient
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
+			loggerFactory.AddSerilog();
+
+			if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();

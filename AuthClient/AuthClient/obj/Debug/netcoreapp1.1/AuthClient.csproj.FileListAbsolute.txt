@@ -7,3 +7,12 @@ C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e24
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.AssemblyInfo.cs
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.dll
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\bin\Debug\netcoreapp1.1\AuthClient.deps.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\bin\Debug\netcoreapp1.1\AuthClient.runtimeconfig.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\bin\Debug\netcoreapp1.1\AuthClient.runtimeconfig.dev.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\bin\Debug\netcoreapp1.1\AuthClient.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\bin\Debug\netcoreapp1.1\AuthClient.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.csprojResolveAssemblyReference.cache
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.AssemblyInfo.cs
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthClient\AuthClient\obj\Debug\netcoreapp1.1\AuthClient.pdb

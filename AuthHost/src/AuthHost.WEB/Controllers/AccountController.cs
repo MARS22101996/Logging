@@ -31,7 +31,7 @@ namespace AuthHost.WEB.Controllers
                 var registerModelDto = _mapper.Map<RegisterModelDto>(model);
                 await _accountService.RegisterAsync(registerModelDto);
 
-                _logger.LogInformation($"User was registration with email: {model.Email}");
+                _logger.LogInformation($"User was registrated with email: {model.Email}");
 
                 return Ok();
             }

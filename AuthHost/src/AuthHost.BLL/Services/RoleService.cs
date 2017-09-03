@@ -6,6 +6,7 @@ using AuthHost.BLL.Interfaces;
 using AuthHost.DAL.Entities;
 using AuthHost.DAL.Interfaces;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 
 namespace AuthHost.BLL.Services
 {
@@ -13,11 +14,13 @@ namespace AuthHost.BLL.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly ILogger<RoleService> _logger;
 
-        public RoleService(IUnitOfWork unitOfWork, IMapper mapper)
+        public RoleService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<RoleService> logger)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _logger = logger;
         }
 
 
@@ -35,6 +38,8 @@ namespace AuthHost.BLL.Services
             }
 
             var roleDto = _mapper.Map<RoleDto>(role);
+
+            _logger.LogInformation($"Get role by name: {name}");
 
             return roleDto;
         }
@@ -55,6 +60,8 @@ namespace AuthHost.BLL.Services
             var roleToCreate = new Role { Name = name };
 
             await _unitOfWork.Roles.CreateAsync(roleToCreate);
+
+            _logger.LogInformation($"New role {name} created");
         }
     }
 }

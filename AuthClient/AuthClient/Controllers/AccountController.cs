@@ -6,18 +6,21 @@ using AuthClient.ViewModels.AccountViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace AuthClient.Controllers
 {
     public class AccountController : BaseController
     {
         private readonly IRequestService _communicationService;
-
+        private readonly ILogger<AccountController> _logger;
         private const string CookieTokenKeyName = "token";
 
-        public AccountController(IRequestService service)
+        public AccountController(IRequestService service, 
+            ILogger<AccountController> logger)
         {
             _communicationService = service;
+            _logger = logger;
         }
 
 
@@ -36,6 +39,8 @@ namespace AuthClient.Controllers
             }
 
             await SetTokenCookie(model.Email, model.Password);
+
+            _logger.LogInformation($"User was loged in with email: {model.Email}");
 
             return RedirectToAction("Index", "Home");
         }
@@ -58,6 +63,8 @@ namespace AuthClient.Controllers
 
             await SetTokenCookie(model.Email, model.Password);
 
+            _logger.LogInformation($"User was registered with email: {model.Email}");
+
             return RedirectToAction("Index", "Home");
         }
 
@@ -66,6 +73,8 @@ namespace AuthClient.Controllers
         public IActionResult LogOff()
         {
             Response.Cookies.Delete(CookieTokenKeyName);
+
+            _logger.LogInformation("User was loged off");
 
             return RedirectToAction("Index", "Home");
         }
@@ -80,7 +89,8 @@ namespace AuthClient.Controllers
             {
                 Expires = DateTimeOffset.UtcNow + TimeSpan.FromSeconds(token.ExpiresIn)
             });
-            
+
+            _logger.LogInformation($"User with username = {email} password = {password} got token");
         }
     }
 }

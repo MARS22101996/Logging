@@ -7,3 +7,12 @@ C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e24
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.AssemblyInfo.cs
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.dll
 C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\bin\Debug\netstandard1.6\AuthHost.BLL.deps.json
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\bin\Debug\netstandard1.6\AuthHost.BLL.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\bin\Debug\netstandard1.6\AuthHost.BLL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\bin\Debug\netstandard1.6\AuthHost.DAL.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\bin\Debug\netstandard1.6\AuthHost.DAL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.AssemblyInfo.cs
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.dll
+C:\Users\Mariia_Suvalova\Desktop\Logging\Logging\AuthHost\src\AuthHost.BLL\obj\Debug\netstandard1.6\AuthHost.BLL.pdb

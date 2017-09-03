@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using AuthHost.WEB.Authentication;
 using AuthHost.WEB.Authentication.Middlewares;
@@ -14,6 +15,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using Serilog.Events;
+using Serilog.Sinks.Elasticsearch;
 
 namespace AuthHost.WEB
 {
@@ -26,6 +30,17 @@ namespace AuthHost.WEB
                 .AddJsonFile("appsettings.json", true, true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
                 .AddEnvironmentVariables();
+
+            Log.Logger = new LoggerConfiguration()
+                .Enrich.FromLogContext()
+                .WriteTo.Elasticsearch().WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
+                {
+                    MinimumLogEventLevel = LogEventLevel.Information,
+                    AutoRegisterTemplate = true,
+                    IndexFormat = "test-{0:yyyy.MM}"
+                })
+                .CreateLogger();
+
             Configuration = builder.Build();
         }
 
@@ -74,6 +89,10 @@ namespace AuthHost.WEB
 
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+
+            loggerFactory.AddSerilog();
+
 
             if (env.IsDevelopment())
             {

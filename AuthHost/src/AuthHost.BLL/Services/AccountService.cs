@@ -7,6 +7,7 @@ using AuthHost.BLL.Interfaces;
 using AuthHost.DAL.Entities;
 using AuthHost.DAL.Interfaces;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 
 namespace AuthHost.BLL.Services
 {
@@ -18,19 +19,19 @@ namespace AuthHost.BLL.Services
         private readonly IMapper _mapper;
         private const string AdminEmail = "admin@mail.com";
         private const string AdminPassword = "Pass1";
+        private readonly ILogger<AccountService> _logger;
 
         public AccountService(
             IUnitOfWork unitOfWork, 
             IRoleService roleService, 
             ICryptoProvider cryptoProvider, 
-            IMapper mapper
-          )
+            IMapper mapper, ILogger<AccountService> logger)
         {
             _unitOfWork = unitOfWork;
             _roleService = roleService;
             _cryptoProvider = cryptoProvider;
             _mapper = mapper;
-         
+            _logger = logger;
         }
 
         public UserDto Login(LoginModelDto loginModel)
@@ -45,6 +46,8 @@ namespace AuthHost.BLL.Services
             }
 
             var userDto = _mapper.Map<UserDto>(user);
+
+            _logger.LogInformation($"User login with email {loginModel.Email}");
 
             return userDto;
         }
@@ -66,6 +69,8 @@ namespace AuthHost.BLL.Services
                 AppendRole(userdmin, "admin");
 
                 await _unitOfWork.Users.CreateAsync(userdmin);
+
+                _logger.LogInformation($"Admin user was register with email {AdminEmail}");
             }
         }
         public async Task RegisterAsync(RegisterModelDto registerModelDto)
@@ -79,6 +84,8 @@ namespace AuthHost.BLL.Services
             user.PasswordHash = _cryptoProvider.GetHash(registerModelDto.Password);
 
             await _unitOfWork.Users.CreateAsync(user);
+
+            _logger.LogInformation($"User register with email {registerModelDto.Email}");
         }
 
         private void ValidateEmail(string email)
