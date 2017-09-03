@@ -1,0 +1,7 @@
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\bin\Debug\netstandard1.6\AuthHost.DAL.deps.json
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\bin\Debug\netstandard1.6\AuthHost.DAL.dll
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\bin\Debug\netstandard1.6\AuthHost.DAL.pdb
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\obj\Debug\netstandard1.6\AuthHost.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\obj\Debug\netstandard1.6\AuthHost.DAL.AssemblyInfo.cs
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\obj\Debug\netstandard1.6\AuthHost.DAL.dll
+C:\Users\Mariia_Suvalova\Desktop\444\Auth-2f8e3e5ceff307b675463a6f617d049e262e2491\AuthHost\src\AuthHost.DAL\obj\Debug\netstandard1.6\AuthHost.DAL.pdb
